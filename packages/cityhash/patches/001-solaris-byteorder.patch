@@ -1,0 +1,29 @@
+From 90b4a409f7447a5e80ae36098a788bf4c88e4942 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?David=20H=C3=B6ppner?= <0xffea@gmail.com>
+Date: Thu, 17 Jan 2013 17:15:18 +0000
+Subject: [PATCH] Include sys/byteorder.h on Solaris
+
+---
+ src/city.cc | 6 ++++++
+ 1 file changed, 6 insertions(+)
+
+diff --git a/src/city.cc b/src/city.cc
+index 334aa23..b192a8e 100644
+--- a/src/city.cc
++++ b/src/city.cc
+@@ -60,6 +60,12 @@ static uint32 UNALIGNED_LOAD32(const char *p) {
+ #define bswap_32(x) OSSwapInt32(x)
+ #define bswap_64(x) OSSwapInt64(x)
+ 
++#elif defined(__sun) || defined(sun)
++
++#include <sys/byteorder.h>
++#define bswap_32(x) BSWAP_32(x)
++#define bswap_64(x) BSWAP_64(x)
++
+ #else
+ 
+ #include <byteswap.h>
+-- 
+1.8.0
+
