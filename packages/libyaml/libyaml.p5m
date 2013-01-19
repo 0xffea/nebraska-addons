@@ -1,0 +1,18 @@
+set name=pkg.fmri value=pkg:/library/$(name)@$(ips-version)
+set name=pkg.summary value="$(summary)"
+set name=info.upstream-url value="$(home)"
+set name=info.source_url value="$(download)"
+license $(license-file)  license="$(license)"
+
+dir path=usr
+dir path=usr/include
+dir path=usr/lib
+dir path=usr/lib/$(MACH64)
+dir path=usr/lib/$(MACH64)/pkgconfig
+
+file path=usr/include/yaml.h
+file path=usr/lib/$(MACH64)/libyaml-0.so.2.0.2
+file path=usr/lib/$(MACH64)/pkgconfig/yaml-0.1.pc
+
+link path=usr/lib/$(MACH64)/libyaml-0.so.2 target=libyaml-0.so.2.0.2
+link path=usr/lib/$(MACH64)/libyaml.so target=libyaml-0.so.2.0.2
