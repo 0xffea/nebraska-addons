@@ -1,0 +1,60 @@
+set name=pkg.fmri value=pkg:/library/security/$(name)@$(ips-version)
+set name=pkg.summary value="$(summary)"
+set name=info.upstream-url value="$(home)"
+set name=info.source_url value="$(download)"
+license $(license-file)  license="$(license)"
+
+dir path=usr
+dir path=usr/bin
+dir path=usr/include
+dir path=usr/lib
+dir path=usr/lib/$(MACH64)
+dir path=usr/share
+dir path=usr/share/aclocal
+dir path=usr/share/common-lisp
+dir path=usr/share/common-lisp/source
+dir path=usr/share/common-lisp/source/gpg-error
+dir path=usr/share/locale
+dir path=usr/share/locale/cs
+dir path=usr/share/locale/cs/LC_MESSAGES
+dir path=usr/share/locale/de
+dir path=usr/share/locale/de/LC_MESSAGES
+dir path=usr/share/locale/fr
+dir path=usr/share/locale/fr/LC_MESSAGES
+dir path=usr/share/locale/it
+dir path=usr/share/locale/it/LC_MESSAGES
+dir path=usr/share/locale/nl
+dir path=usr/share/locale/nl/LC_MESSAGES
+dir path=usr/share/locale/pl
+dir path=usr/share/locale/pl/LC_MESSAGES
+dir path=usr/share/locale/ro
+dir path=usr/share/locale/ro/LC_MESSAGES
+dir path=usr/share/locale/sv
+dir path=usr/share/locale/sv/LC_MESSAGES
+dir path=usr/share/locale/vi
+dir path=usr/share/locale/vi/LC_MESSAGES
+dir path=usr/share/locale/zh_CN
+dir path=usr/share/locale/zh_CN/LC_MESSAGES
+
+file path=usr/bin/gpg-error
+file path=usr/bin/gpg-error-config
+file path=usr/include/gpg-error.h
+file path=usr/lib/$(MACH64)/libgpg-error.so.0.8.0
+file path=usr/share/aclocal/gpg-error.m4
+file path=usr/share/common-lisp/source/gpg-error/gpg-error-codes.lisp
+file path=usr/share/common-lisp/source/gpg-error/gpg-error-package.lisp
+file path=usr/share/common-lisp/source/gpg-error/gpg-error.asd
+file path=usr/share/common-lisp/source/gpg-error/gpg-error.lisp
+file path=usr/share/locale/cs/LC_MESSAGES/libgpg-error.mo
+file path=usr/share/locale/de/LC_MESSAGES/libgpg-error.mo
+file path=usr/share/locale/fr/LC_MESSAGES/libgpg-error.mo
+file path=usr/share/locale/it/LC_MESSAGES/libgpg-error.mo
+file path=usr/share/locale/nl/LC_MESSAGES/libgpg-error.mo
+file path=usr/share/locale/pl/LC_MESSAGES/libgpg-error.mo
+file path=usr/share/locale/ro/LC_MESSAGES/libgpg-error.mo
+file path=usr/share/locale/sv/LC_MESSAGES/libgpg-error.mo
+file path=usr/share/locale/vi/LC_MESSAGES/libgpg-error.mo
+file path=usr/share/locale/zh_CN/LC_MESSAGES/libgpg-error.mo
+
+link path=usr/lib/$(MACH64)/libgpg-error.so.0 target=libgpg-error.so.0.8.0
+link path=usr/lib/$(MACH64)/libgpg-error.so target=libgpg-error.so.0.8.0
