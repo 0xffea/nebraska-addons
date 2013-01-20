@@ -1,0 +1,27 @@
+set name=pkg.fmri value=pkg:/library/security/$(name)@$(ips-version)
+set name=pkg.summary value="$(summary)"
+set name=info.upstream-url value="$(home)"
+set name=info.source_url value="$(download)"
+license $(license-file)  license="$(license)"
+
+dir path=usr
+dir path=usr/bin
+dir path=usr/include
+dir path=usr/lib
+dir path=usr/lib/$(MACH64)
+dir path=usr/share
+dir path=usr/share/aclocal
+dir path=usr/share/info
+
+file path=usr/bin/dumpsexp
+file path=usr/bin/hmac256
+file path=usr/bin/libgcrypt-config
+file path=usr/include/gcrypt.h
+file path=usr/include/gcrypt-module.h
+file path=usr/lib/$(MACH64)/libgcrypt.so.11.7.0
+file path=usr/share/aclocal/libgcrypt.m4
+file path=usr/share/info/gcrypt.info
+file path=usr/share/info/gcrypt.info-1
+
+link path=usr/lib/$(MACH64)/libgcrypt.so.11 target=libgcrypt.so.11.7.0
+link path=usr/lib/$(MACH64)/libgcrypt.so target=libgcrypt.so.11.7.0
