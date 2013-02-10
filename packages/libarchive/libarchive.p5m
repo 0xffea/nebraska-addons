@@ -1,0 +1,63 @@
+set name=pkg.fmri value=pkg:/library/libarchive@$(ips-version)
+set name=pkg.summary value="$(summary)"
+set name=info.upstream-url value="$(home)"
+set name=info.source_url value="$(download)"
+license $(license-file)  license="$(license)"
+
+dir path=usr
+dir path=usr/bin
+dir path=usr/include
+dir path=usr/lib
+dir path=usr/lib/$(MACH64)
+dir path=usr/lib/$(MACH64)/pkgconfig
+dir path=usr/share
+dir path=usr/share/man
+dir path=usr/share/man/man1
+dir path=usr/share/man/man3
+dir path=usr/share/man/man5
+
+file path=usr/include/archive.h
+file path=usr/include/archive_entry.h
+file path=usr/lib/$(MACH64)/libarchive.so.13.1.2
+file path=usr/lib/$(MACH64)/pkgconfig/libarchive.pc
+file path=usr/share/man/man3/archive_entry.3
+file path=usr/share/man/man3/archive_entry_acl.3
+file path=usr/share/man/man3/archive_entry_linkify.3
+file path=usr/share/man/man3/archive_entry_paths.3
+file path=usr/share/man/man3/archive_entry_perms.3
+file path=usr/share/man/man3/archive_entry_stat.3
+file path=usr/share/man/man3/archive_entry_time.3
+file path=usr/share/man/man3/archive_read.3
+file path=usr/share/man/man3/archive_read_data.3
+file path=usr/share/man/man3/archive_read_disk.3
+file path=usr/share/man/man3/archive_read_extract.3
+file path=usr/share/man/man3/archive_read_filter.3
+file path=usr/share/man/man3/archive_read_format.3
+file path=usr/share/man/man3/archive_read_free.3
+file path=usr/share/man/man3/archive_read_header.3
+file path=usr/share/man/man3/archive_read_new.3
+file path=usr/share/man/man3/archive_read_open.3
+file path=usr/share/man/man3/archive_read_set_options.3
+file path=usr/share/man/man3/archive_util.3
+file path=usr/share/man/man3/archive_write.3
+file path=usr/share/man/man3/archive_write_blocksize.3
+file path=usr/share/man/man3/archive_write_data.3
+file path=usr/share/man/man3/archive_write_disk.3
+file path=usr/share/man/man3/archive_write_filter.3
+file path=usr/share/man/man3/archive_write_finish_entry.3
+file path=usr/share/man/man3/archive_write_format.3
+file path=usr/share/man/man3/archive_write_free.3
+file path=usr/share/man/man3/archive_write_header.3
+file path=usr/share/man/man3/archive_write_new.3
+file path=usr/share/man/man3/archive_write_open.3
+file path=usr/share/man/man3/archive_write_set_options.3
+file path=usr/share/man/man3/libarchive.3
+file path=usr/share/man/man3/libarchive_changes.3
+file path=usr/share/man/man3/libarchive_internals.3
+file path=usr/share/man/man5/cpio.5
+file path=usr/share/man/man5/libarchive-formats.5
+file path=usr/share/man/man5/mtree.5
+file path=usr/share/man/man5/tar.5
+
+link path=usr/lib/$(MACH64)/libarchive.so target=libarchive.so.13.1.2
+link path=usr/lib/$(MACH64)/libarchive.so.13 target=libarchive.so.13.1.2
