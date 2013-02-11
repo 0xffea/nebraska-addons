@@ -1,11 +1,10 @@
-set name=pkg.fmri value=pkg:/library/libarchive@$(ips-version)
+set name=pkg.fmri value=pkg:/library/$(name)@$(ips-version)
 set name=pkg.summary value="$(summary)"
 set name=info.upstream-url value="$(home)"
 set name=info.source_url value="$(download)"
 license $(license-file)  license="$(license)"
 
 dir path=usr
-dir path=usr/bin
 dir path=usr/include
 dir path=usr/lib
 dir path=usr/lib/$(MACH64)
